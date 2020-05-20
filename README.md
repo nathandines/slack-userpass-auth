@@ -50,14 +50,14 @@ const WORKSPACE = 'example';
 const USERNAME = 'joe@example.com';
 const PASSWORD = 'this_isnt_a_real_password';
 
-let slackCreds = slackUserPassAuth(WORKSPACE, USERNAME, PASSWORD, function (cookie, authToken) {
-    const web = new WebClient(authToken, {'headers': {'Cookie': cookie}});
+slackUserPassAuth(WORKSPACE, USERNAME, PASSWORD, function (cookie, authToken) {
+    let web = new WebClient(authToken, {'headers': {'Cookie': cookie}});
 
     const conversationId = 'ABCDEF123';
 
     (async () => {
         // See: https://api.slack.com/methods/chat.postMessage
-        const res = await web.chat.postMessage({ channel: conversationId, text: 'Hello there' });
+        let res = await web.chat.postMessage({ channel: conversationId, text: 'Hello there' });
 
         // `res` contains information about the posted message
         console.log('Message sent: ', res.ts);
