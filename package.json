@@ -1,9 +1,12 @@
 {
   "name": "slack-userpass-auth",
   "author": "Nathan Dines <nath@ndin.es> (https://github.com/nathandines)",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "Unlicense",
   "main": "index.js",
+  "homepage": "https://github.com/nathandines/slack-userpass-auth",
+  "bugs": "https://github.com/nathandines/slack-userpass-auth/issues",
+  "repository": "github:nathandines/slack-userpass-auth",
   "dependencies": {
     "cheerio": "^1.0.0-rc.3",
     "request": "^2.88.2"
