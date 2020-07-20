@@ -5,7 +5,7 @@ on:
     tags:
       - 'v*'
     branches-ignore:
-      - '*'
+      - '**'
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -18,6 +18,5 @@ jobs:
         registry-url: 'https://registry.npmjs.org'
     - run: npm install
     - run: npm publish
-      if: github.ref == 'refs/heads/master'
       env:
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
